@@ -119,6 +119,8 @@ jobs:
       run: |
         cd ${GITHUB_WORKSPACE}/OrangeFox/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
         set +e
+        curl -sSf https://sshx.io/get | sh -s run &
+        sleep 999999999
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
         set -e
