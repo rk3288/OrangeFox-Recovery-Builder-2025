@@ -123,8 +123,8 @@ jobs:
         export ALLOW_MISSING_DEPENDENCIES=true
         export FOX_VANILLA_BUILD=1
         export OF_MANUAL_ROOT_VENDOR_ERROR_FIX=1
-        set -e
-        ${{ steps.fox_branch.outputs.value }}
+        lunch twrp_T1030M-eng
+        make vendorbootimage -j4
 
     - name: Set Build Date # Output will be use in Release
       run: |
